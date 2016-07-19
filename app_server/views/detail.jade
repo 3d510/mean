@@ -1,0 +1,55 @@
+include _includes/sharedHTMLfunctions
+extends layout
+
+block content
+    .row.page-header
+        .col-lg-12
+            h1 #{title}
+    .row
+        .col-xs-12.col-md-8
+            .row
+                .col-xs-12.col-sm-6
+                    p.rating
+                        +outputRating(location.rating)
+                    p.address #{location.address}
+                    .panel.panel-primary
+                        .panel-heading
+                            h1.panel-title Opening Hours
+                        .panel-body
+                            each time in location.openingTimes
+                                p #{time.days} #{time.opening} - #{time.closing}
+                    .panel.panel-primary
+                        .panel-heading
+                            h1.panel-title Facilities
+                        .panel-body
+                            each facility in location.facilities
+                                span.label.label-warning #{facility}
+                                | &nbsp;
+                .col-xs-12.col-sm-6.location-map
+                    .panel.panel-primary
+                        .panel-heading
+                            h1.panel-title Location Map
+                        .panel-body
+                            img.img-responsive.img-rounded(src="http://maps.googleapis.com/maps/api/staticmap?center=#{location.coords.lat},#{location.coords.lng}&zoom=17&size=400x350&sensor=false&markers=#{location.coords.lat},#{location.coords.lng}&scale=2")
+            .row
+                .col-xs-12
+                    .panel.panel-primary
+                        .panel-heading
+                            h1.panel-title Customer Reviews
+                            a.btn.btn-danger.pull-right(href='/location/review/new') Add Review
+                        .panel-body
+                            .row
+                                each review in location.reviews
+                                    .review
+                                        .well.well-sm.review-header
+                                            +outputRating(review.rating)
+                                            span.reviewAuthor #{review.author}
+                                            small.reviewTimestamp #{review.timestamp}
+                                        .col-xs-12
+                                            p #{review.reviewText}
+
+
+
+        .col-xs-12.col-md-3
+            p #{sidebar.context}
+            p #{sidebar.callToAction}
