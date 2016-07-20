@@ -2,6 +2,10 @@ var mongoose = require("mongoose");
 var dbURL = 'mongodb://localhost/Loc8r';
 require("./locations");
 
+console.log(process.env.ENV);
+if (process.env.NODE_ENV === 'production') {
+    dbURI = 'mongodb://duc0510:chuyentoanams4@ds023425.mlab.com:23425/loc8r';
+}
 mongoose.connect(dbURL);
 
 mongoose.connection.on('connected',function () {
