@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03fbc4f7-8042-47d7-8e4a-635489f898f7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_api/controllers/locations.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_api/controllers/reviews.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app_api/routes/index.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app_server/models/db.js" afterPath="$PROJECT_DIR$/app_api/models/db.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app_server/models/locations.js" afterPath="$PROJECT_DIR$/app_api/models/locations.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -416,7 +410,7 @@
       <workItem from="1468891687442" duration="10932000" />
       <workItem from="1468907746312" duration="6859000" />
       <workItem from="1468978727822" duration="8510000" />
-      <workItem from="1469417017466" duration="4618000" />
+      <workItem from="1469417017466" duration="4813000" />
     </task>
     <task id="LOCAL-00001" summary="initialize&#10;">
       <created>1468480265050</created>
@@ -429,7 +423,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53397000" />
+    <option name="totallyTimeSpent" value="53592000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
