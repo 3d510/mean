@@ -19,7 +19,7 @@ var reviewSchema = new mongoose.Schema({
         type: Number,
         required: true,
         min: 0,
-        max: 5,
+        max: 5
     },
     reviewText: String,
     createdOn: {
@@ -38,7 +38,7 @@ var locationSchema = new mongoose.Schema({
         type: Number,
         "default":0,
         min: 0,
-        max: 5,
+        max: 5
     },
     facilities: [String],
     coords: {
